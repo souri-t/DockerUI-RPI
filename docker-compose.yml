@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+    dockerui:
+        image: hypriot/rpi-dockerui
+        container_name: dockerui
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - 9000:9000
+        restart: always
+        tty: true
